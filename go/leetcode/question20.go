@@ -1,4 +1,6 @@
-package leetcode
+package main
+
+import "fmt"
 
 func isValid(s string) bool {
 	if len(s) == 0 {
@@ -32,4 +34,11 @@ func isValid(s string) bool {
 		}
 	}
 	return len(stack) == 0
+}
+
+func main() {
+	s := "(((({{{{}}}}))))"
+	if isValid(s) {
+		fmt.Println("Matched")
+	}
 }
