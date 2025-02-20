@@ -4,7 +4,7 @@ target("queue")
     set_kind("binary")
     add_files("src/*.cpp")
     set_optimize("fastest")
-    set_languages("c99", "c++11")
+    set_languages("c17", "c++17")
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
 --
