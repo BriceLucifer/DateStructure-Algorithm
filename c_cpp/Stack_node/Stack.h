@@ -11,8 +11,8 @@ typedef struct item{
 }Node;
 
 // Node malloc function to make the function more useful
-Node* new(int data);
-void delete(Node *p);
+Node* newNode(int data);
+void deleteNode(Node *p);
 
 typedef struct list{
     int size;

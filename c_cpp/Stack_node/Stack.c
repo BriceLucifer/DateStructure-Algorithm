@@ -1,13 +1,13 @@
 #include "Stack.h"
 
-Node* new(int data){
+Node* newNode(int data){
     Node *p = (Node*)malloc(sizeof(Node));
     p->data = data;
     p->next = NULL;
     return p;
 }
 
-void delete(Node *p){
+void deleteNode(Node *p){
     free(p);
     printf("has freed the memory on heap\n");
 }
@@ -39,11 +39,11 @@ Node* peek(Stack *p){
 
 void push(int data,Stack *p){
     if (p->head == NULL){
-        p->head = new(data);
+        p->head = newNode(data);
         p->size += 1;
         return ;
     } else{
-        Node *temp = new(data);
+        Node *temp = newNode(data);
         temp->next = p->head;
         p->head = temp;
         p->size += 1;
@@ -60,7 +60,7 @@ void pop(Stack *p){
         p->size -= 1;
         printf("pop Node: {%d}\n",temp->data);
         p->head = p->head->next;
-        delete(temp);
+        deleteNode(temp);
         return ;
     }
 }
